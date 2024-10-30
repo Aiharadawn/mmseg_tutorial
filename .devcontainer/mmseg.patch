@@ -1,0 +1,50 @@
+10,13c10,13
+< MMCV_MIN = '2.0.0rc4'
+< MMCV_MAX = '2.2.0'
+< MMENGINE_MIN = '0.5.0'
+< MMENGINE_MAX = '1.0.0'
+---
+> MMCV_MIN = "2.0.0rc4"
+> MMCV_MAX = "6.5.0"
+> MMENGINE_MIN = "0.5.0"
+> MMENGINE_MAX = "1.0.0"
+30c30
+<     assert version.release, f'failed to parse version {version_str}'
+---
+>     assert version.release, f"failed to parse version {version_str}"
+36c36
+<         mapping = {'a': -3, 'b': -2, 'rc': -1}
+---
+>         mapping = {"a": -3, "b": -2, "rc": -1}
+41,42c41,44
+<                 warnings.warn(f'unknown prerelease version {version.pre[0]}, '
+<                               'version checking may go wrong')
+---
+>                 warnings.warn(
+>                     f"unknown prerelease version {version.pre[0]}, "
+>                     "version checking may go wrong"
+>                 )
+61,63c63,66
+< assert (mmcv_min_version <= mmcv_version < mmcv_max_version), \
+<     f'MMCV=={mmcv.__version__} is used but incompatible. ' \
+<     f'Please install mmcv>=2.0.0rc4.'
+---
+> assert mmcv_min_version <= mmcv_version < mmcv_max_version, (
+>     f"MMCV=={mmcv.__version__} is used but incompatible. "
+>     f"Please install mmcv>=2.0.0rc4."
+> )
+69,72c72,76
+< assert (mmengine_min_version <= mmengine_version < mmengine_max_version), \
+<     f'MMEngine=={mmengine.__version__} is used but incompatible. ' \
+<     f'Please install mmengine>={mmengine_min_version}, '\
+<     f'<{mmengine_max_version}.'
+---
+> assert mmengine_min_version <= mmengine_version < mmengine_max_version, (
+>     f"MMEngine=={mmengine.__version__} is used but incompatible. "
+>     f"Please install mmengine>={mmengine_min_version}, "
+>     f"<{mmengine_max_version}."
+> )
+74c78
+< __all__ = ['__version__', 'version_info', 'digit_version']
+---
+> __all__ = ["__version__", "version_info", "digit_version"]

@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  learn_mmseg:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: learn_mmseg_container
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
