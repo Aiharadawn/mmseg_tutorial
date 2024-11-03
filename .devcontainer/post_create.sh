@@ -2,7 +2,7 @@
 
 # Install utils
 apt update
-apt install -y wget curl
+apt install -y wget curl unzip
 
 # Install OpenMMLab
 pip install -U openmim
