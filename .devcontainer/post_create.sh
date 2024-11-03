@@ -1,5 +1,9 @@
 #! /bin/bash
 
+# Install utils
+apt update
+apt install -y wget curl
+
 # Install OpenMMLab
 pip install -U openmim
 mim install mmengine
