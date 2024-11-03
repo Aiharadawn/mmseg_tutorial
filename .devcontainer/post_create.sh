@@ -20,4 +20,4 @@ cd -
 pip install ipykernel
 
 # Fix mmcv version problem
-patch mmsegmentation/mmseg/__init__.py < .devcontainer/mmseg.patch
+patch -t mmsegmentation/mmseg/__init__.py < .devcontainer/mmseg.patch
