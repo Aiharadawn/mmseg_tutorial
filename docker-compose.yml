@@ -5,7 +5,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: learn_mmseg_container
+    container_name: mmseg1127_container
+    volumes:
+      - /workspace/visual_ws/Seg_ws:/mmseg
+    command: bash
     runtime: nvidia
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
